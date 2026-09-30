@@ -1,16 +1,11 @@
-import { Link } from "expo-router";
+import { FAKE_RECIPES } from "@/data/fakeRecipes";
+import { Link, Stack } from "expo-router";
 import { StyleSheet, Text, View } from "react-native";
-
-const FAKE_RECIPES = [
-  { id: 1, title: "Pfannkuchen" },
-  { id: 2, title: "Reibeplätzchen" },
-  { id: 3, title: "Wiener Schnitzel" },
-];
 
 export default function Index() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Mein Kochbuch</Text>
+      <Stack.Screen options={{ title: "Mein Kochbuch" }} />
 
       <Link href="/recipe/new">
         <Text>+ Neues Rezept</Text>
